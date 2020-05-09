@@ -12,13 +12,13 @@ function App() {
     }
   ])
 
-  const handleFormSubmission = () => {
-
+  const handleFormSubmission = (teamMember) => {
+    setTeamMembers([...teamMembers, teamMember])
   }
 
   return (
     <div className="App">
-      <h1>Test Text</h1>
+      <h1>Team Builder Form</h1>
       <Form onSubmit={handleFormSubmission} />
       <Members teamMembers={teamMembers} />
     </div>
