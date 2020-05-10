@@ -13,7 +13,7 @@ const Members = (props) => {
                     <h2>{teamMember.name}</h2>
                     <p>{teamMember.email}</p>
                     <p>{teamMember.role}</p>
-                </div>
+                </div>      
             ))}
         </div>
     )
