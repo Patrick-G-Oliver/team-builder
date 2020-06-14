@@ -23,7 +23,8 @@ const Form = (props) => {
                                         // which is passed to Form.js via props assigned to the onSubmit variable
         clearMemberForm();
     };
-    // handleChange allows for 
+    // handleChange allows for user entries to text inputs to be added to state data (memberFormData)
+    // see the onChange={handleChange} attributes on the input tags in the form JSX element below)
     const handleChange = (event) => {
         setMemberData({...memberFormData, [event.target.name]: event.target.value});
     };
@@ -31,6 +32,8 @@ const Form = (props) => {
     return (
         <form onSubmit={handleSubmit}> {/* onSubmit attribute listens for submit button click */}
             <label htmlFor="name">Team Member Name:</label>
+            {/* input value attribute sets .name property on state data memberFormData object */}
+            {/* input onChange adds user input to state data memberFormData object via handleChange (see above) */}
             <input
                 id="name"
                 name="name"

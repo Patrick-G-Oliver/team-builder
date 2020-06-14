@@ -8,6 +8,8 @@ const StyledTeamMemberDiv = styled.div`
 const Members = (props) => {
     return (
         <div>
+            {/* state data (teamMembers) passed in from App.js via props */}
+            {/* Via .map, for every teamMembers object a div containing an h2 and two ps is rendered. */}
             {props.teamMembers.map(teamMember => (
                 <div>{/* Why is there a key={note.id} attribue added to this div tag?*/}
                     <h2>{teamMember.name}</h2>
